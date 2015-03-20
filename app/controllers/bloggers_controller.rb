@@ -9,12 +9,24 @@ class BloggersController < ApplicationController
     render :new
   end
 
+  def show
+    @blogger = Blogger.find(params[:id])
+    render :show
+  end
+
   def create
-    @blogger = Blogger.new(params[:blogger])
+    @blogger = Blogger.new(params[:name])
     if @blogger.save
       redirect_to bloggers_path
     else
       render :new
     end
   end
+
+  private
+  def blogger_params
+    params.require(:blogger).permit(:name)
+  end
+
+
 end
