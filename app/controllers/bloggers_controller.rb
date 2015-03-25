@@ -15,7 +15,7 @@ class BloggersController < ApplicationController
   end
 
   def create
-    @blogger = Blogger.new(params[:name])
+    @blogger = Blogger.new(blogger_params)
     if @blogger.save
       redirect_to bloggers_path
     else
