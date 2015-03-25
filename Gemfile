@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'quiet_assets'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'therubyracer'
+gem 'devise'
 
 
 group :development, :test do
