@@ -7,6 +7,7 @@ application up and running.
 
 MIT License 2015 Crystal Contreras-Grossman
 
-Known Bugs
+Known Bugs:
+
 App in in progress.
 
