@@ -1,8 +1,13 @@
 == README
-App is in process.
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 
 MIT License 2015 Crystal Contreras-Grossman
+
+Known Bugs:
+
+App in in progress.
+
