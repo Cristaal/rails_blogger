@@ -1,0 +1,10 @@
+<%= render "layouts/errors", object: @post %>
+
+<%= form_for @post do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title, class: 'form-control', required: true, autofocus: true %>
+<%= f.label :body %>
+<%= f.text_field :body, class: 'form-control', required: true %>
+<br>
+<%= f.submit class: 'btn btn-success', method: "update" %>
+<% end %>
