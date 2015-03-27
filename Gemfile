@@ -14,7 +14,9 @@ gem 'quiet_assets'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'therubyracer'
 gem 'devise'
-
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'bootstrap_form'
+gem 'bootswatch-rails'
 
 group :development, :test do
   gem 'byebug'

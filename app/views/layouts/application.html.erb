@@ -7,9 +7,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <ul class="main-nav list-unstyled">
+          <li><%= link_to "Bear DnD", root_path, class: 'navbar-brand' %></li>
+        </ul>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+        <% if user_signed_in? %>
+        <li>Logged in as: <strong><%= link_to current_user.email, user_path(current_user) %></strong></li>
+        <% end %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
 
 <%= yield %>
+
+</div>
 
 </body>
 </html>
