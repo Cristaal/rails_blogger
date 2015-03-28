@@ -17,6 +17,7 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bootstrap_form'
 gem 'bootswatch-rails'
+gem 'high_voltage', '~> 2.2.1'
 
 group :development, :test do
   gem 'byebug'
