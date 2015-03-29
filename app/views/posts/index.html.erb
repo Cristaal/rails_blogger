@@ -8,7 +8,7 @@
     Title: <%= link_to post.title, post_path(post) %><br>
     By: <%= post.user.email %>
   </br>
-    Published: <%= post.created_at %>
+    Published: <%= post.user.created_at %>
   </br>
     <% if post.user==current_user %>
       <%= link_to "Edit Post", edit_post_path(post) %>
