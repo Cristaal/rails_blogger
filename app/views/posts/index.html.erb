@@ -1,13 +1,11 @@
-<%= link_to "Add Post", new_post_path %>
 
 <% if @posts.any? %>
-<h4>Your blog posts:</h4>
+<h4>Blog Posts:</h4>
 <ul>
   <% @posts.each do |post| %>
   <li>
     <hr>
-    Title: $<%= post.title %><br>
-    Post: <%= post.body %><br>
+    Title: <%= link_to post.title, post_path(post) %><br>
     <hr>
   </li>
   <% end %>

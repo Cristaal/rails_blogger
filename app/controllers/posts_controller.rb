@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
+    @posts = Post.all
   end
 
   def new
@@ -13,11 +14,15 @@ class PostsController < ApplicationController
     @post = @user.posts.new(post_params)
     if @post.save
       flash[:success] = "Post Successfully Added!"
-      redirect_to root_path
+      redirect_to posts_path
     else
       flash[:danger] = "There was a problem creating your post, please try again."
       render :new
     end
+  end
+
+  def show
+    @post = Post.find(params[:id]) 
   end
 
   private
