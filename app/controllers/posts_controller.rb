@@ -29,6 +29,27 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @user = User.find(current_user.id)
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:success] = "Post Successfully Updated"
+      redirect_to user_path(@user)
+    end
+  end
+
+  def destroy
+    @user = User.find(current_user.id)
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:danger] = "Post Successfully Deleted!"
+    redirect_to user_path(@user)
+  end
+
   private
     def post_params
       params.require(:post).permit(:title, :body)

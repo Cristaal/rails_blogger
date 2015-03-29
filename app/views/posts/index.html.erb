@@ -7,6 +7,14 @@
     <hr>
     Title: <%= link_to post.title, post_path(post) %><br>
     By: <%= post.user.email %>
+  </br>
+    <% if post.user==current_user %>
+      <%= link_to "Edit Post", edit_post_path(post) %>
+    </br>
+      <%= link_to "Delete Post", post_path(post.id), class: "btn btn-xs btn-danger",
+      data: {confirm: "You sure you want to delete",
+        method: "delete"} %>
+    <% end %>
     <hr>
   </li>
   <% end %>
