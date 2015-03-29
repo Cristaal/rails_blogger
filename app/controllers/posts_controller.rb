@@ -2,7 +2,11 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    if params[:posts_for] == "current"
+      @posts = current_user.posts
+    else
+      @posts = Post.all
+    end
   end
 
   def new
@@ -22,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id]) 
+    @post = Post.find(params[:id])
   end
 
   private
