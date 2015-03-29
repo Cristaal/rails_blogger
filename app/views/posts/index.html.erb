@@ -6,6 +6,7 @@
   <li>
     <hr>
     Title: <%= link_to post.title, post_path(post) %><br>
+    By: <%= post.user.email %>
     <hr>
   </li>
   <% end %>
