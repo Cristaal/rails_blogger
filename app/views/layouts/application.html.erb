@@ -17,7 +17,7 @@
       </div>
       <ul class="nav navbar-nav navbar-left">
         <% if user_signed_in? %>
-        <li>Logged in as: <strong><%= link_to current_user.email, user_path(current_user) %></strong></li>
+        <li>Logged in as: <span class="user-info"><%= link_to current_user.email, user_path(current_user) %></span></strong></li>
         <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
