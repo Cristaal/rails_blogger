@@ -19,4 +19,15 @@ describe "the user login process" do
     click_button "Log in"
     expect(page).to have_content "Invalid email or password"
   end
+
+  it "logs the user out" do
+    user = FactoryGirl.create(:user)
+    visit root_path
+    click_on "Login"
+    fill_in "Email", with: user.email
+    fill_in "Password", with: user.password
+    click_button "Log in"
+    click_on "Logout"
+    expect(page).to have_content "Signed out successfully"
+  end
 end
