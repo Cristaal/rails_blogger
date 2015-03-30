@@ -10,4 +10,13 @@ describe "the user login process" do
     click_button "Log in"
     expect(page). to have_content "Signed in successfully"
   end
+
+  it "will return errors if user doesn't exist" do
+    visit root_path
+    click_on "Login"
+    fill_in "Email", with: Faker::Internet.email
+    fill_in "Password", with: Faker::Internet.password(8)
+    click_button "Log in"
+    expect(page).to have_content "Invalid email or password"
+  end
 end
