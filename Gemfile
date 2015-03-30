@@ -19,6 +19,7 @@ gem 'bootstrap_form'
 gem 'bootswatch-rails'
 gem 'high_voltage', '~> 2.2.1'
 
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -27,4 +28,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'faker'
+  gem 'selenium-webdriver'
+  gem 'factory_girl_rails'
+  gem 'launchy'
 end
