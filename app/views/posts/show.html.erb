@@ -3,4 +3,15 @@
 </br>
 <%= @post.body %>
 </br>
-<%= link_to "Add a Comment" %>
+<%= link_to "Add a Comment", new_comment_path(post_id: "#{@post.id}") %>
+
+
+<p>Comments: </p>
+
+<% @post.comments.each do |comment| %>
+  <li>
+    Comment: <%= comment.body %>
+  </br>
+    By:  <%= comment.user.email %>
+  </li>
+<% end %>
