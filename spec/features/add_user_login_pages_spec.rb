@@ -4,11 +4,21 @@ describe "the add a user process" do
   it "adds a new user" do
     visit root_path
     click_on 'Sign Up'
-    fill_in 'Email', :with => 'No@reservations.com'
-    fill_in 'Password', :with => 'password'
-    fill_in 'Password confirmation', :with => 'password'
+    fill_in 'Email', with: Faker::Internet.email
+    fill_in 'Password', with: Faker::Internet.password
+    fill_in 'Password confirmation', with: Faker::Internet.password
     click_on 'Sign up'
     expect(page).to have_content "Welcome! You have signed up successfully."
+  end
+
+  it "logs the user in" do
+    visit root_path
+    user = FactoryGirl.create(:user)
+    click_on "Login"
+    fill_in "Email", with: user.email
+    fill_in "Password", with: user.password
+    click_button "Log in"
+    expect(page).to have_content "Signed in successfully."
   end
 
   it "gives an error when email is incomplete" do

@@ -38,8 +38,8 @@ describe "the add a blog post process" do
     visit root_path
     user = FactoryGirl.create(:user)
     click_on "Login"
-    fill_in 'Email', :with user.email
-    fill_in 'Password', :with user.password
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
     click_button "Log in"
     click_on "New Entry"
     fill_in "Title", with: Faker::Lorem.sentence(rand(2..10)).chomp('.')

@@ -21,6 +21,7 @@ gem 'high_voltage', '~> 2.2.1'
 
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
