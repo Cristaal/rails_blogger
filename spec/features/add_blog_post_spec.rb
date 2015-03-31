@@ -46,7 +46,7 @@ describe "the add a blog post process" do
     fill_in "Body", with: Faker::Lorem.words(rand(2..10)).join(' ')
     click_button "Create Post"
     click_on "Your Blog Posts"
-    click_button "Delete Post"
+    first('.btn').click
     page.driver.browser.switch_to.alert.accept
     expect(page).to have_content "Post Successfully Deleted!"
   end
