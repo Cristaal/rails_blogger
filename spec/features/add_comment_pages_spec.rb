@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the add a comment to blog post process" do
-  it "adds a comment to an existing blog post", js: true do
+  it "adds a comment to an existing blog post" do 
     visit root_path
     user = FactoryGirl.create(:user)
     click_on "Login"
