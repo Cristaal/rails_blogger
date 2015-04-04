@@ -42,21 +42,25 @@ describe "the add a comment to blog post process" do
     expect(page).to have_content "Comment Successfully Updated"
   end
 
-  it "deletes a blog post", js: true do
+  it "deletes a blog comment", js: true do
     visit root_path
     user = FactoryGirl.create(:user)
     click_on "Login"
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
+    fill_in "Email", with: user.email
+    fill_in "Password", with: user.password
     click_button "Log in"
     click_on "New Entry"
-    fill_in "Title", with: Faker::Lorem.sentence(rand(2..10)).chomp('.')
+    title = Faker::Lorem.sentence(rand(2..10)).chomp('.')
+    fill_in "Title", with: title
     fill_in "Body", with: Faker::Lorem.words(rand(2..10)).join(' ')
-    click_button "Create Post"
-    click_on "Your Blog Posts"
+    click_on "Create Post"
+    click_link "#{title}"
+    click_on "Add a Comment"
+    fill_in "Body", with: Faker::Lorem.words(rand(2..10)).join(' ')
+    click_button "Create Comment"
     first('.btn').click
     page.driver.browser.switch_to.alert.accept
-    expect(page).to have_content "Post Successfully Deleted!"
+    expect(page).to have_content "Comment Successfully Deleted!"
   end
 
 end
