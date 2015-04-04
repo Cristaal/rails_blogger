@@ -38,6 +38,7 @@ describe "the add a comment to blog post process" do
     click_button "Create Comment"
     click_link "Edit Comment"
     fill_in "Body", with: Faker::Lorem.words(rand(2..10)).join(' ')
+    click_button "Update Comment"
     expect(page).to have_content "Comment Successfully Updated"
   end
 
