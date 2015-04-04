@@ -1,14 +1,14 @@
 == README
 
 
-Rails Blogger
+<h1>Rails Blogger</h1>
 
 This is a blogging application using Ruby on Rails and Devise authentication. Users are able to log in, makes posts, and comment on others posts.
 
-Setup Instructions:
+<h2>Setup Instructions:</h2>
 
-Gems
-rails
+<h2>Gems</h2>
+<ul>rails
 pg
 sass-rails
 uglifier
@@ -22,9 +22,9 @@ rspec-rails
 capybara
 faker
 high_voltage
-database_cleaner
+database_cleaner</ul>
 
-Install Bundler:
+<h2>nstall Bundler:</h2>
 
 $ gem install bundler
 Run Bundler:
