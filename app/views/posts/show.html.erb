@@ -3,7 +3,7 @@
 </br>
 <%= @post.body %>
 </br>
-<%= link_to "Add a Comment", new_comment_path(post_id: "#{@post.id}") %>
+<%= link_to "Add a Comment", new_comment_path(@post.id), id: "new_comment_link", remote: true %>
 
 
 <p>Comments: </p>

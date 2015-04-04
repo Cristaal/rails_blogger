@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new(post_id: params[:post_id])
+    @comment = Comment.new(post_id: params[:format])
   end
 
   def create
