@@ -45,4 +45,4 @@ MIT License 2015 Crystal Contreras-Grossman
 
 Known Bugs:
 
-App in in progress. Will have AJAX and twilio functions added before deploying to Heroku
+App in in progress. Will have AJAX and twilio functions added before deploying to Herokugi
