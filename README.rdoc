@@ -1,6 +1,5 @@
 == README
 
-
 Rails Blogger
 
 This is a blogging application using Ruby on Rails and Devise authentication. Users are able to log in, makes posts, and comment on others posts.
@@ -24,7 +23,7 @@ faker
 high_voltage
 database_cleaner
 
-Install Bundler:
+nstall Bundler:
 
 $ gem install bundler
 Run Bundler:
