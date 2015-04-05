@@ -47,5 +47,4 @@ https://afternoon-plateau-9485.herokuapp.com/
 
 
 Known Bugs:
-
-App in in progress. Will have AJAX and twilio functions added before deploying to Herokugi
+No known bugs at this time
