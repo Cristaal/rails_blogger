@@ -2,7 +2,7 @@
 
 Rails Blogger
 
-This is a blogging application using Ruby on Rails and Devise authentication. Users are able to log in, makes posts, and comment on others posts.
+This is a blogging application using Ruby on Rails and Devise authentication. Users are able to log in, makes posts, and comment on others posts. Uses AJAX not only to add comments to posts, but to update them as well.
 
 Setup Instructions:
 
@@ -42,10 +42,9 @@ Type the url localhost:3000 into your web browser.
 
 MIT License 2015 Crystal Contreras-Grossman
 
-//
+Link to Heroku:
 https://afternoon-plateau-9485.herokuapp.com/
 
-//
 
 Known Bugs:
 
