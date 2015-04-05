@@ -7,8 +7,8 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new
     @post = Post.find(params[:post_id])
+    @comment = Comment.new(post_id: @post.id)
     respond_to do |format|
       format.html { render :new }
       format.js
@@ -36,6 +36,10 @@ class CommentsController < ApplicationController
 
   def edit
     @comment = Comment.find(params[:id])
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def update
