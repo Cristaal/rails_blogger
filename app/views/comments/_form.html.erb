@@ -1,6 +1,6 @@
 <%= render "layouts/errors", object: @comment %>
 
-<%= form_for @comment do |f| %>
+<%= form_for @comment, id: "new_comment", remote: true do |f| %>
   <%= f.label :body %>
   <%= f.text_field :body, class: 'form-control', required: true, autofocus: true %>
   <%= f.hidden_field :post_id, value: @comment.post_id %>

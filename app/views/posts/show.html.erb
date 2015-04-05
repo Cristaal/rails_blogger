@@ -3,22 +3,24 @@
 </br>
 <%= @post.body %>
 </br>
-<%= link_to "Add a Comment", new_comment_path(@post.id), id: "new_comment_link", remote: true %>
+<%= link_to "Add a Comment", new_comment_path(post_id: "#{@post.id}"), remote: true %>
 
 
 <p>Comments: </p>
 
 <% @post.comments.each do |comment| %>
-  <li>
-    Comment: <%= comment.body %>
-  </br>
-    By:  <%= comment.user.email %>
-  </li>
-    <% if comment.user==current_user %>
-      <%= link_to "Edit Comment", edit_comment_path(comment) %>
+  <li id="comment_show">
+    <li>
+      Comment: <%= comment.body %>
     </br>
-      <%= link_to "Delete Comment", comment_path(comment.id), class: "btn btn-xs btn-danger",
-      data: {confirm: "Are you sure you want to delete your post?",
-        method: "delete"} %>
-    <% end %>
+      By:  <%= comment.user.email %>
+    </li>
+      <% if comment.user==current_user %>
+        <%= link_to "Edit Comment", edit_comment_path(comment) %>
+      </br>
+        <%= link_to "Delete Comment", comment_path(comment.id), class: "btn btn-xs btn-danger",
+        data: {confirm: "Are you sure you want to delete your post?",
+          method: "delete"} %>
+      <% end %>
+  </li>
 <% end %>

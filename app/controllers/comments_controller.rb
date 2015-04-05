@@ -1,11 +1,20 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
+  respond_to :js, :html, :json
+
   def index
   end
 
   def new
-    @comment = Comment.new(post_id: params[:format])
+    @comment = Comment.new
+    @post = Post.find(params[:post_id])
+    respond_to do |format|
+      format.html { render :new }
+      format.js do
+        binding.pry
+      end
+    end
   end
 
   def create
