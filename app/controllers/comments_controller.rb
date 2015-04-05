@@ -11,17 +11,19 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     respond_to do |format|
       format.html { render :new }
-      format.js do
-        binding.pry
-      end
+      format.js
     end
   end
 
   def create
     @comment = Comment.new(comment_params)
+
     if @comment.save
-      flash[:success] = "Your Comment Has Been Added!"
-      redirect_to post_path(@comment.post)
+      respond_to do |format|
+        format.html { redirect_to post_path(@comment.post) }
+          flash[:success] = "Your Comment Has Been Added!"
+        format.js
+      end
     else
       flash[:danger] = "There was a problem creating your comment, please try again."
       render :new

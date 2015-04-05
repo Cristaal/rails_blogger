@@ -3,7 +3,7 @@
 <%= form_for @comment, id: "new_comment", remote: true do |f| %>
   <%= f.label :body %>
   <%= f.text_field :body, class: 'form-control', required: true, autofocus: true %>
-  <%= f.hidden_field :post_id, value: @comment.post_id %>
+  <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.hidden_field :user_id, value: current_user.id %>
   <br>
   <%= f.submit class: 'btn btn-success', method: "update" %>
