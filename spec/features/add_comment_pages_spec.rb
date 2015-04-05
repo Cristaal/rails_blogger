@@ -58,7 +58,7 @@ describe "the add a comment to blog post process" do
     click_on "Add a Comment"
     fill_in "Body", with: Faker::Lorem.words(rand(2..10)).join(' ')
     click_button "Create Comment"
-    first('.btn').click
+    click_link "Delete Comment"
     page.driver.browser.switch_to.alert.accept
     expect(page).to have_content "Comment Successfully Deleted!"
   end
