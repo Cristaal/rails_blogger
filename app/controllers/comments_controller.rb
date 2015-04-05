@@ -46,8 +46,11 @@ class CommentsController < ApplicationController
     @user = User.find(current_user.id)
     @comment = Comment.find(params[:id])
     if @comment.update(comment_params)
-      flash[:success] = "Comment Successfully Updated"
-      redirect_to post_path(@comment.post)
+      respond_to do |format|
+        format.html { redirect_to post_path(@comment.post) }
+          flash[:success] = "Comment Successfully Updated"
+        format.js
+      end
     end
   end
 
