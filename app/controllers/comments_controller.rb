@@ -17,8 +17,8 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-
     if @comment.save
+      @comment.post.user.send_message(@comment.body)
       respond_to do |format|
         format.html { redirect_to post_path(@comment.post) }
           flash[:success] = "Your Comment Has Been Added!"
