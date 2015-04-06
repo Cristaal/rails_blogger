@@ -6,22 +6,22 @@ This is a blogging application using Ruby on Rails and Devise authentication. Us
 
 Setup Instructions:
 
-Gems
-rails
-pg
-sass-rails
-uglifier
-coffee-rails
-jquery-rails
-turbolinks
-pry
-bootstrap-sass
-shoulda-matchers
-rspec-rails
-capybara
-faker
-high_voltage
-database_cleaner
+<h3>Gems</h3>
+<ul>rails</ul>
+<ul>pg</ul>
+<ul>sass-rails</ul>
+<ul>uglifier</ul>
+<ul>coffee-rails</ul>
+<ul>jquery-rails</ul>
+<ul>turbolinks</ul>
+<ul>pry</ul>
+<ul>bootstrap-sass</ul>
+<ul>shoulda-matchers</ul>
+<ul>rspec-rails</ul>
+<ul>capybara</ul>
+<ul>faker</ul>
+<ul>database_cleaner</ul>
+<ul>high_voltage</ul>
 
 Install Bundler:
 
