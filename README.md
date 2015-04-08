@@ -24,9 +24,11 @@ Setup Instructions:
 <ul>high_voltage</ul>
 
 Install Bundler:
+</br>
 
 $ gem install bundler
-Run Bundler:
+</br>
+<h3>Run Bundler:</h3>
 
 $ bundle
 Start the database:
