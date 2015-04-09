@@ -1,6 +1,6 @@
 == README
 
-Rails Blogger
+<h1>Rails Blogger</h1>
 
 This is a blogging application using Ruby on Rails and Devise authentication. Users are able to log in, makes posts, and comment on others posts. Uses AJAX not only to add comments to posts, but to update them as well.
 
