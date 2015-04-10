@@ -23,7 +23,7 @@ Setup Instructions:
 <ul>database_cleaner</ul>
 <ul>high_voltage</ul>
 
-Install Bundler:
+<h4>Install Bundler:</h4>
 </br>
 
 $ gem install bundler
