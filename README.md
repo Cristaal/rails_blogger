@@ -22,6 +22,7 @@ Setup Instructions:
 <ul>faker</ul>
 <ul>database_cleaner</ul>
 <ul>high_voltage</ul>
+<ul>factory_girl_rails</ul>
 
 <h4>Install Bundler:</h4>
 </br>
