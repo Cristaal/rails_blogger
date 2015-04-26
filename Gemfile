@@ -27,14 +27,14 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'pry'
-  gem 'rspec-rails'
+  # gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'faker'
   gem 'selenium-webdriver'
   gem 'factory_girl_rails'
   gem 'launchy'
-  # gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :production do
