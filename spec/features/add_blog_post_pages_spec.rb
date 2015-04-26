@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 describe "the add a blog post process" do
+
+  let!(:user) { FactoryGirl.create(:user) }
+
   it "adds a new blog post" do
     visit root_path
-    user = FactoryGirl.create(:user)
     click_on "Login"
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
@@ -17,7 +19,6 @@ describe "the add a blog post process" do
 
   it "updates a blog post" do
     visit root_path
-    user = FactoryGirl.create(:user)
     click_on "Login"
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
@@ -36,7 +37,6 @@ describe "the add a blog post process" do
 
   it "deletes a blog post", js: true do
     visit root_path
-    user = FactoryGirl.create(:user)
     click_on "Login"
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
