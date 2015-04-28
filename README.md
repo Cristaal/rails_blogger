@@ -37,11 +37,11 @@ Start the database:
 $ postgres
 Create databases:
 
-$ rake db:create
-$ rake db:migrate
-$ rake db:test:prepare
-$ rails server
-Type the url localhost:3000 into your web browser.
+<li>$ rake db:create</li>
+<li>$ rake db:migrate</li>
+<li>$ rake db:test:prepare</li>
+<li>$ rails server</li>
+<li>Type the url localhost:3000 into your web browser.</li>
 
 MIT License 2015 Crystal Contreras-Grossman
 
