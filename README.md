@@ -50,4 +50,5 @@ https://afternoon-plateau-9485.herokuapp.com/
 
 
 Known Bugs:
+<br>
 No known bugs at this time
