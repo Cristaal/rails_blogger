@@ -27,9 +27,7 @@ Setup Instructions:
 <h4>Install Bundler:</h4>
 </br>
 
-$ gem install bundler
-</br>
-<h3>Run Bundler:</h3>
+
 
 $ bundle
 Start the database:
