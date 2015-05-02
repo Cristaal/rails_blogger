@@ -33,6 +33,8 @@ $ bundle
 Start the database:
 
 $ postgres
+
+
 Create databases:
 
 <li>$ rake db:create</li>
